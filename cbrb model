@@ -1,0 +1,11 @@
+game:GetService("ReplicatedStorage").Viewmodels["v_AWP"]:Destroy()
+wait()
+local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage").Viewmodels)
+game:GetObjects('rbxassetid://10427625740')[1].Parent = Model1
+Model = game:GetService("ReplicatedStorage").Viewmodels.Model
+for _, Child in pairs(Model:GetChildren()) do
+	Child.Parent = Model.Parent
+end
+Model:Destroy()
+wait()
+game:GetService("ReplicatedStorage").Viewmodels["v_AWPw"].Name = "v_AWP"
