@@ -1,0 +1,16 @@
+while game:GetService("RunService").RenderStepped:Wait() do
+	pcall(function()
+		local player = game:GetService("Players").LocalPlayer.Character
+		if player.EquippedTool.Value == "AWP" then
+			player.Gun.Shoot.SoundId = "rbxassetid://10435018572"
+            player.Gun.Shoot.Volume = 3
+            player.Gun.bolt.SoundId = "rbxassetid://10435050257"
+			player.Gun.boltin.SoundId = "rbxassetid://10435048574" 
+			player.Gun.maghit.SoundId = "rbxassetid://10435060521"
+			player.Gun.magin.SoundId = "rbxassetid://1684278055"
+			player.Gun.magout.SoundId = "rbxassetid://1684278254"
+            game:GetService("ReplicatedStorage").Weapons.AWP.Model.boltin.SoundId = "rbxassetid://10435048574"
+            game:GetService("ReplicatedStorage").Weapons.AWP.Model.bolt.SoundId = "rbxassetid://10435050257"
+		end
+	end)
+end
